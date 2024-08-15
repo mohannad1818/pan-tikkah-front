@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import LoginRegister from './pages/LoginRegister';
+import AdminDashboard from './pages/AdminDashboard';
+import Menu from './pages/Menu';
+import Contact from './pages/Contact'; // استيراد صفحة الاتصال الصحيحة
+import Location from './pages/Location';
+import About from './pages/About';
 
-function App() {
+import './main.css'; // استيراد ملف CSS الرئيسي
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<LoginRegister />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/contact" element={<Contact />} /> {/* استخدم Contact هنا فقط */}
+          <Route path="/location" element={<Location />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
