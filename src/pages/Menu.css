@@ -78,8 +78,8 @@
 
 .menu-content {
     flex: 1;
-    padding: 2vh 3vw;
-    margin-top: 3vh;
+    padding: 1vh 3vw; /* تقليل المسافة الفاصلة من الأعلى */
+    margin-top: 0vh;  /* إزالة الهامش العلوي لرفع المنيو */
     overflow-x: hidden;
 }
 

@@ -14,7 +14,7 @@ const Home = () => {
       </div>
       <header className="home-header">
         <img src={logo} alt="بان تيكه" className="logo" />
-        <h1>بان تكه</h1>
+        <h1>بان تكا</h1>
         <div className="social-icons">
           <a href="https://www.instagram.com/Pan.tikka" target="_blank" rel="noopener noreferrer">
             <FaInstagram size={40} />
